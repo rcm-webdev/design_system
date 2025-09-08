@@ -1,0 +1,29 @@
+{
+  "name": "vercel-design-system-demo",
+  "version": "1.0.0",
+  "description": "A sample landing page built with Vercel's design system and deployed using GitHub Actions",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass style.scss:style.css --style=compressed",
+    "build-dev": "sass style.scss:style.css --watch",
+    "dev": "sass style.scss:style.css --watch & python3 -m http.server 8000",
+    "clean": "rm -f style.css style.css.map"
+  },
+  "keywords": [
+    "vercel",
+    "design-system",
+    "sass",
+    "github-actions",
+    "geist",
+    "css",
+    "frontend"
+  ],
+  "author": "Vercel Design System Demo",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

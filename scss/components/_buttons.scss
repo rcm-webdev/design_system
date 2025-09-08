@@ -1,0 +1,302 @@
+// Vercel Button Components
+// Based on Geist Design System
+
+@import '../base/colors';
+@import '../base/typography';
+@import '../base/spacing';
+
+// ============================================
+// BUTTON BASE STYLES
+// ============================================
+%button-base {
+  @include body;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  font-weight: $font-weight-medium;
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--border-focus);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// ============================================
+// BUTTON SIZES
+// ============================================
+%button-xs {
+  @extend %button-base;
+  height: 24px;
+  padding: 0 $spacing-2;
+  font-size: $font-size-xs;
+  border-radius: 4px;
+}
+
+%button-sm {
+  @extend %button-base;
+  height: 32px;
+  padding: 0 $spacing-3;
+  font-size: $font-size-sm;
+  border-radius: 5px;
+}
+
+%button-md {
+  @extend %button-base;
+  height: 40px;
+  padding: 0 $spacing-4;
+  font-size: $font-size-sm;
+}
+
+%button-lg {
+  @extend %button-base;
+  height: 48px;
+  padding: 0 $spacing-6;
+  font-size: $font-size-base;
+  border-radius: 8px;
+}
+
+%button-xl {
+  @extend %button-base;
+  height: 56px;
+  padding: 0 $spacing-8;
+  font-size: $font-size-lg;
+  border-radius: 10px;
+}
+
+// ============================================
+// BUTTON VARIANTS
+// ============================================
+
+// Primary Button
+%button-primary {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+
+  &:hover {
+    background-color: $blue-700;
+    border-color: $blue-700;
+  }
+
+  &:active {
+    background-color: $blue-800;
+    border-color: $blue-800;
+  }
+}
+
+// Secondary Button
+%button-secondary {
+  background-color: var(--background-1);
+  color: var(--text-primary);
+  border-color: var(--border-primary);
+
+  &:hover {
+    background-color: var(--background-2);
+    border-color: var(--border-secondary);
+  }
+
+  &:active {
+    background-color: var(--background-3);
+  }
+}
+
+// Ghost Button
+%button-ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: transparent;
+
+  &:hover {
+    background-color: var(--background-2);
+  }
+
+  &:active {
+    background-color: var(--background-3);
+  }
+}
+
+// Danger Button
+%button-danger {
+  background-color: var(--error);
+  color: white;
+  border-color: var(--error);
+
+  &:hover {
+    background-color: $red-700;
+    border-color: $red-700;
+  }
+
+  &:active {
+    background-color: $red-800;
+    border-color: $red-800;
+  }
+}
+
+// Success Button
+%button-success {
+  background-color: var(--success);
+  color: white;
+  border-color: var(--success);
+
+  &:hover {
+    background-color: $green-700;
+    border-color: $green-700;
+  }
+
+  &:active {
+    background-color: $green-800;
+    border-color: $green-800;
+  }
+}
+
+// Warning Button
+%button-warning {
+  background-color: var(--warning);
+  color: white;
+  border-color: var(--warning);
+
+  &:hover {
+    background-color: $amber-600;
+    border-color: $amber-600;
+  }
+
+  &:active {
+    background-color: $amber-700;
+    border-color: $amber-700;
+  }
+}
+
+// ============================================
+// BUTTON CLASSES
+// ============================================
+
+// Base button class
+.btn {
+  @extend %button-md;
+  @extend %button-secondary;
+
+  // Size modifiers
+  &.btn-xs { @extend %button-xs; }
+  &.btn-sm { @extend %button-sm; }
+  &.btn-md { @extend %button-md; }
+  &.btn-lg { @extend %button-lg; }
+  &.btn-xl { @extend %button-xl; }
+
+  // Variant modifiers
+  &.btn-primary { @extend %button-primary; }
+  &.btn-secondary { @extend %button-secondary; }
+  &.btn-ghost { @extend %button-ghost; }
+  &.btn-danger { @extend %button-danger; }
+  &.btn-success { @extend %button-success; }
+  &.btn-warning { @extend %button-warning; }
+
+  // Full width
+  &.btn-full {
+    width: 100%;
+  }
+
+  // Loading state
+  &.btn-loading {
+    color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid transparent;
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: button-loading-spinner 1s ease infinite;
+    }
+  }
+
+  // Icon buttons
+  &.btn-icon {
+    padding: 0;
+    width: 40px;
+
+    &.btn-xs { width: 24px; }
+    &.btn-sm { width: 32px; }
+    &.btn-md { width: 40px; }
+    &.btn-lg { width: 48px; }
+    &.btn-xl { width: 56px; }
+  }
+
+  // Button with icon
+  .btn-icon-left {
+    margin-right: $spacing-2;
+  }
+
+  .btn-icon-right {
+    margin-left: $spacing-2;
+  }
+}
+
+// ============================================
+// BUTTON GROUP
+// ============================================
+.btn-group {
+  display: inline-flex;
+  border-radius: 6px;
+  overflow: hidden;
+
+  .btn {
+    border-radius: 0;
+    border-right-width: 0;
+
+    &:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+
+    &:last-child {
+      border-radius: 0 6px 6px 0;
+      border-right-width: 1px;
+    }
+
+    &:only-child {
+      border-radius: 6px;
+      border-right-width: 1px;
+    }
+
+    &:focus {
+      z-index: 1;
+    }
+  }
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+@keyframes button-loading-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ============================================
+// RESPONSIVE UTILITIES
+// ============================================
+@media (max-width: 640px) {
+  .btn-responsive {
+    width: 100%;
+  }
+}

@@ -1,0 +1,320 @@
+// Vercel Card Components
+// Based on Geist Design System
+
+@import '../base/colors';
+@import '../base/spacing';
+
+// ============================================
+// CARD BASE STYLES
+// ============================================
+%card-base {
+  background-color: var(--background-1);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+// ============================================
+// CARD VARIANTS
+// ============================================
+%card-default {
+  @extend %card-base;
+
+  &:hover {
+    border-color: var(--border-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+}
+
+%card-interactive {
+  @extend %card-base;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--border-focus);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+%card-elevated {
+  @extend %card-base;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+%card-outlined {
+  @extend %card-base;
+  border-width: 2px;
+}
+
+%card-glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+// ============================================
+// CARD CLASSES
+// ============================================
+.card {
+  @extend %card-default;
+
+  // Variant modifiers
+  &.card-interactive { @extend %card-interactive; }
+  &.card-elevated { @extend %card-elevated; }
+  &.card-outlined { @extend %card-outlined; }
+  &.card-glass { @extend %card-glass; }
+
+  // Size modifiers
+  &.card-sm {
+    border-radius: 8px;
+  }
+
+  &.card-lg {
+    border-radius: 16px;
+  }
+
+  &.card-xl {
+    border-radius: 20px;
+  }
+
+  // Full width
+  &.card-full {
+    width: 100%;
+  }
+}
+
+// ============================================
+// CARD COMPONENTS
+// ============================================
+.card-header {
+  padding: $spacing-6;
+  border-bottom: 1px solid var(--border-primary);
+
+  &.card-header-sm {
+    padding: $spacing-4;
+  }
+
+  &.card-header-lg {
+    padding: $spacing-8;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: var(--text-primary);
+  }
+
+  .card-subtitle {
+    margin: $spacing-1 0 0 0;
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+  }
+}
+
+.card-body {
+  padding: $spacing-6;
+
+  &.card-body-sm {
+    padding: $spacing-4;
+  }
+
+  &.card-body-lg {
+    padding: $spacing-8;
+  }
+
+  .card-text {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: $line-height-relaxed;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-4;
+    }
+  }
+}
+
+.card-footer {
+  padding: $spacing-6;
+  border-top: 1px solid var(--border-primary);
+  background-color: var(--background-2);
+
+  &.card-footer-sm {
+    padding: $spacing-4;
+  }
+
+  &.card-footer-lg {
+    padding: $spacing-8;
+  }
+
+  // Actions in footer
+  .card-actions {
+    display: flex;
+    gap: $spacing-3;
+    align-items: center;
+
+    &.card-actions-end {
+      justify-content: flex-end;
+    }
+
+    &.card-actions-center {
+      justify-content: center;
+    }
+
+    &.card-actions-between {
+      justify-content: space-between;
+    }
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  &.card-image-cover {
+    object-fit: cover;
+  }
+
+  &.card-image-contain {
+    object-fit: contain;
+  }
+}
+
+.card-media {
+  position: relative;
+  overflow: hidden;
+
+  .card-image {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .card-image {
+    transform: scale(1.05);
+  }
+}
+
+// ============================================
+// CARD LAYOUTS
+// ============================================
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+
+  .card-media {
+    flex-shrink: 0;
+    width: 200px;
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+
+    .card-media {
+      width: 100%;
+    }
+  }
+}
+
+// ============================================
+// CARD GRID
+// ============================================
+.card-grid {
+  display: grid;
+  gap: $spacing-6;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &.card-grid-sm {
+    gap: $spacing-4;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  &.card-grid-lg {
+    gap: $spacing-8;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  &.card-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(calc(50% - #{$spacing-3}), 1fr));
+  }
+
+  &.card-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(calc(33.333% - #{$spacing-4}), 1fr));
+  }
+
+  &.card-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(calc(25% - #{$spacing-4}), 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ============================================
+// CARD SPECIAL EFFECTS
+// ============================================
+.card-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+  }
+
+  // Adjacent card effects (like in original design)
+  &:has(+ .card-3d:hover) {
+    transform: perspective(500px) rotateY(-20deg);
+  }
+
+  &:hover + .card-3d {
+    transform: perspective(500px) rotateY(20deg);
+  }
+}
+
+.card-glow {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary), var(--success), var(--warning), var(--error));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+}

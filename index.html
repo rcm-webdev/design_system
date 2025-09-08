@@ -4,37 +4,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
-    <title>Github Actions Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Vercel Design System - GitHub Actions Demo</title>
+    <meta name="description" content="A sample landing page built with Vercel's design system and deployed using GitHub Actions">
 </head>
 <body>
-    <div class="container">
-        <div class="one">
-            <h1>Static Page Deployment Example</h1>
-            <p class="one-p">This is a simple static page to demonstrate deployment.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Build with Vercel's
+                    <span class="gradient-text">Design System</span>
+                </h1>
+                <p class="hero-description">
+                    A comprehensive Sass library based on Vercel's Geist design system. 
+                    Modern, accessible, and ready for production.
+                </p>
+                <div class="hero-actions">
+                    <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
+                    <a href="#demo" class="btn btn-ghost btn-lg">View Demo</a>
+                </div>
+            </div>
         </div>
-        <a href="#two"><img src="arrow-down.svg" /></a>
-        <div class="two" id="two">
-                <div class="cards">
-                    <p>
-                        This page is made out of HTML and CSS.
-                    </p>
-                </div>
-                <div class="cards">
-                    <p>
-                        These cards are animated.
-                    </p>
-                </div>
-                <div class="cards">
-                    <p>
-                        It is also responsive!
-                    </p>
-                </div>
+        <div class="hero-scroll">
+            <a href="#features" class="scroll-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
-        <footer style="color: black; font-weight: bold;">
-            &copy; 2025 rcmcodes
-        </footer>
-    
-    </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features</h2>
+                <p class="section-description">
+                    Everything you need to build modern, beautiful interfaces
+                </p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card card-interactive card-3d">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Design Tokens</h3>
+                        <p class="card-text">
+                            Comprehensive color palette, typography, and spacing system based on Vercel's Geist design language.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card card-interactive card-3d">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Responsive Design</h3>
+                        <p class="card-text">
+                            Mobile-first approach with flexible grid system and responsive utilities for all screen sizes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card card-interactive card-3d">
+                    <div class="card-body">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Performance First</h3>
+                        <p class="card-text">
+                            Optimized Sass architecture with minimal CSS output and efficient component structure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Component Showcase</h2>
+                <p class="section-description">
+                    Interactive examples of the design system in action
+                </p>
+            </div>
+
+            <div class="demo-grid">
+                <!-- Button Demo -->
+                <div class="demo-item">
+                    <h4>Buttons</h4>
+                    <div class="demo-content">
+                        <div class="button-group">
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-ghost">Ghost</button>
+                            <button class="btn btn-success btn-sm">Success</button>
+                            <button class="btn btn-danger btn-sm">Danger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Demo -->
+                <div class="demo-item">
+                    <h4>Cards</h4>
+                    <div class="demo-content">
+                        <div class="card card-elevated">
+                            <div class="card-header">
+                                <h5 class="card-title">Sample Card</h5>
+                                <p class="card-subtitle">With header and footer</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    This is a sample card component with elevation and hover effects.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-actions card-actions-end">
+                                    <button class="btn btn-ghost btn-sm">Cancel</button>
+                                    <button class="btn btn-primary btn-sm">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Actions Section -->
+    <section class="github-actions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Automated Deployment</h2>
+                <p class="section-description">
+                    This page is automatically deployed using GitHub Actions
+                </p>
+            </div>
+
+            <div class="deployment-flow">
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 19C-2 19 -2 5 9 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 5C26 5 26 19 15 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="12" y1="1" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Code Push</h4>
+                    <p>Push changes to main branch</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M19.4 15A1.65 1.65 0 0 0 21 13.09A1.65 1.65 0 0 0 19.4 9" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4.6 9A1.65 1.65 0 0 0 3 10.91A1.65 1.65 0 0 0 4.6 15" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Build Process</h4>
+                    <p>Compile Sass and optimize assets</p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16V8A2 2 0 0 0 19 6H5A2 2 0 0 0 3 8V16A2 2 0 0 0 5 18H19A2 2 0 0 0 21 16Z" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Deploy</h4>
+                    <p>Publish to GitHub Pages</p>
+                </div>
+            </div>
+
+            <div class="code-example">
+                <h4>GitHub Actions Workflow</h4>
+                <pre><code>name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Sass
+        run: sass scss/vercel.scss style.css
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Vercel Design System Demo</p>
+                    <p>Built with ❤️ using GitHub Actions</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 19C4 20.5 4 16.5 2 16M22 16V20.5C22 21.9 20.9 23 19.5 23H16.5C15.1 23 14 21.9 14 20.5V19.5C14 18.5 14.5 17.8 15.2 17.5C13.4 17.3 11.5 16.4 11.5 13C11.5 11.8 12 10.8 12.8 10.1C12.6 9.4 12.6 8.3 12.8 7.5C12.8 7.5 14.2 7.1 16.5 8.6C17.4 8.4 18.4 8.3 19.5 8.3C20.6 8.3 21.6 8.4 22.5 8.6C24.8 7.1 26.2 7.5 26.2 7.5C26.4 8.3 26.4 9.4 26.2 10.1C27 10.8 27.5 11.8 27.5 13C27.5 16.4 25.6 17.3 23.8 17.5C24.5 17.8 25 18.5 25 19.5V20.5C25 21.9 23.9 23 22.5 23H19.5C18.1 23 17 21.9 17 20.5V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 22H22L12 2Z"/>
+                        </svg>
+                        Vercel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
