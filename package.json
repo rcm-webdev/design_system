@@ -1,7 +1,7 @@
 {
-  "name": "vercel-design-system-demo",
+  "name": "taro-design-system-demo",
   "version": "1.0.0",
-  "description": "A sample landing page built with Vercel's design system and deployed using GitHub Actions",
+  "description": "A sample landing page built with Taro's design system and deployed using GitHub Actions",
   "main": "index.html",
   "scripts": {
     "build": "sass style.scss:style.css --style=compressed",
@@ -10,7 +10,7 @@
     "clean": "rm -f style.css style.css.map"
   },
   "keywords": [
-    "vercel",
+    "taro",
     "design-system",
     "sass",
     "github-actions",
@@ -18,7 +18,7 @@
     "css",
     "frontend"
   ],
-  "author": "Vercel Design System Demo",
+  "author": "Taro Design System Demo",
   "license": "MIT",
   "devDependencies": {
     "sass": "^1.70.0"

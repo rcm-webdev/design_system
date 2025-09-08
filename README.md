@@ -1,10 +1,10 @@
-# Vercel Design System - Sass Library Demo
+# Taro Design System - Sass Library Demo
 
-A comprehensive Sass library based on Vercel's Geist design system with automated GitHub Actions deployment.
+A comprehensive Sass library based on Taro's Geist design system with automated GitHub Actions deployment.
 
 ## 🎨 Features
 
-- **Complete Design System**: Colors, typography, spacing, and components based on Vercel's Geist design language
+- **Complete Design System**: Colors, typography, spacing, and components based on Taro's Geist design language
 - **Modern Sass Architecture**: Well-organized SCSS files with mixins, utilities, and components
 - **Responsive Design**: Mobile-first approach with flexible grid system
 - **Dark Mode Support**: Built-in dark mode with CSS custom properties
@@ -56,7 +56,7 @@ The project automatically deploys to GitHub Pages when you push to the main bran
 ```
 ├── scss/
 │   ├── base/
-│   │   ├── _colors.scss      # Vercel color palette
+│   │   ├── _colors.scss      # Taro color palette
 │   │   ├── _typography.scss  # Font system and text styles
 │   │   └── _spacing.scss     # Spacing scale and utilities
 │   ├── components/
@@ -64,7 +64,7 @@ The project automatically deploys to GitHub Pages when you push to the main bran
 │   │   └── _cards.scss       # Card components
 │   ├── utilities/
 │   │   └── _layout.scss      # Layout utilities
-│   └── vercel.scss           # Main entry point
+│   └── taro.scss           # Main entry point
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml        # GitHub Actions workflow
@@ -76,7 +76,7 @@ The project automatically deploys to GitHub Pages when you push to the main bran
 ## 🎯 Design System Components
 
 ### Colors
-Based on Vercel's Geist design system with comprehensive color scales:
+Based on Taro's Geist design system with comprehensive color scales:
 - **Gray Scale**: 50-1000 with semantic naming
 - **Blue Scale**: Primary brand colors
 - **Semantic Colors**: Success, warning, error, info
@@ -107,7 +107,7 @@ Based on Vercel's Geist design system with comprehensive color scales:
 
 ```scss
 // Import the entire system
-@import 'scss/vercel';
+@import 'scss/taro';
 
 // Use design tokens
 .my-component {
@@ -209,10 +209,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- [Vercel Design System](https://vercel.com/geist)
+- [Taro Design System](https://github.com/vercel/geist)
 - [Sass Documentation](https://sass-lang.com/)
 - [GitHub Actions](https://github.com/features/actions)
 
 ---
 
-Built with ❤️ using Vercel's design principles and GitHub Actions automation.
+Built with ❤️ using Taro's design principles and GitHub Actions automation.

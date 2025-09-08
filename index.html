@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>Vercel Design System - GitHub Actions Demo</title>
-    <meta name="description" content="A sample landing page built with Vercel's design system and deployed using GitHub Actions">
+    <title>Taro Design System - GitHub Actions Demo</title>
+    <meta name="description" content="A sample landing page built with Taro's design system and deployed using GitHub Actions">
 </head>
 <body>
     <!-- Hero Section -->
@@ -14,11 +14,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Build with Vercel's
+                    Build with Taro's
                     <span class="gradient-text">Design System</span>
                 </h1>
                 <p class="hero-description">
-                    A comprehensive Sass library based on Vercel's Geist design system. 
+                    A comprehensive Sass library based on Taro's Geist design system. 
                     Modern, accessible, and ready for production.
                 </p>
                 <div class="hero-actions">
@@ -58,7 +58,7 @@
                         </div>
                         <h3 class="feature-title">Design Tokens</h3>
                         <p class="card-text">
-                            Comprehensive color palette, typography, and spacing system based on Vercel's Geist design language.
+                            Comprehensive color palette, typography, and spacing system based on Taro's Geist design language.
                         </p>
                     </div>
                 </div>
@@ -211,7 +211,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Compile Sass
-        run: sass scss/vercel.scss style.css
+        run: sass scss/taro.scss style.css
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4</code></pre>
             </div>
@@ -223,7 +223,7 @@ jobs:
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2025 Vercel Design System Demo</p>
+                    <p>&copy; 2025 Taro Design System Demo</p>
                     <p>Built with ❤️ using GitHub Actions</p>
                 </div>
                 <div class="footer-links">
@@ -237,7 +237,7 @@ jobs:
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2L2 22H22L12 2Z"/>
                         </svg>
-                        Vercel
+                        Taro
                     </a>
                 </div>
             </div>
